@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/src/assets/Logo/efforts.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BEE</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+  <script>
+    //TODO: Remove counter
+    (() => {
+      const now = Date.now();
+      const millisInDay = 86400000;
+      const lastHitMillis = parseInt(localStorage.getItem('a') ?? "");
+
+      if (lastHitMillis && now - lastHitMillis < millisInDay) {
+        return;
+      }
+
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', 'https://api.sansstudio.id/api/analytics/guestCount');
+      xhr.send();
+
+      localStorage.setItem('a', now.toString());
+    })();
+  </script>
+</body>
+
+</html>

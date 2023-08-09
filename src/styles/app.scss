@@ -1,0 +1,48 @@
+#landing-cover {
+	background: linear-gradient(
+			0deg,
+			rgba(17, 27, 22, 0.78),
+			rgba(17, 27, 22,0.78)
+		),
+		url(../assets/background2.png);
+	background-size: cover;
+	background-position: 0%;
+}
+
+#background-2 {
+	background: linear-gradient(
+			0deg,
+			rgba(6, 78, 59, 0.75),
+			rgba(6, 78, 59, 0.75)
+		),
+		url(../assets/background2.png);
+	background-size: cover;
+	background-position: center;
+	object-fit: cover;
+}
+
+.with-custom-popover .mantine-Popover-arrow {
+	border-top: 1px solid #065f46 !important;
+	border-left: 1px solid #065f46 !important;
+}
+
+.list-panah li:before {
+	content: "➢";
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em;
+}
+
+/* TODO: #14 Change all figcaption on session 1 and 2 to use this style */
+main.center-figcaption figure {
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	figcaption {
+		text-align: center;
+		font-size: 0.75rem /* 12px */;
+		line-height: 1rem /* 16px */;
+	}
+}
