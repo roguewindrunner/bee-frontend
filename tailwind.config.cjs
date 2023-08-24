@@ -14,7 +14,9 @@ module.exports = {
         tertiary: '#04BA70',
         quaternary: '#262626',
         quinary: '#737373',
-        senary: '#FAFAFA'
+        senary: '#FAFAFA',
+        septenary: '#525252',
+        octonary: '#E5E5E5',
       },
       fontSize: {
         '2xs': "0.5rem",

@@ -1,8 +1,9 @@
 import {Link} from "react-router-dom";
-import EFForTSLogo from "../assets/logo/EFForTS.png";
-import DFGLogo from "../assets/logo/DFG.png";
-import Figure1 from "../assets/figure1.png";
+import EFForTSLogo from "@/assets/Logo/efforts.png";
+import DFGLogo from "@/assets/Logo/dfg.png";
+import Figure1 from "@/assets/figure1.png";
 import ObjectiveCheckbox from "@/components/ObjectiveCheckbox";
+import SessionComponent from "@/components/SessionComponent";
 
 export default function LandingPage() {
 	return (
@@ -92,7 +93,6 @@ export default function LandingPage() {
 					</div>
 				</div>
 			</section>
-
 			{/* Content */}
 			<section className="w-full flex flex-col px-6 mt-8 gap-4 text-neutral-800 lg:max-w-screen-lg lg:mx-auto">
 				<h1 className="mt-4 mb-8">
@@ -217,7 +217,6 @@ export default function LandingPage() {
 					.
 				</p>
 			</section>
-
 			{/* Overall Learning Objectives Section */}
 			<section className="bg-white py-4 mt-8 text-primary">
 				<div className="w-full flex flex-col px-6 gap-4 lg:max-w-screen-lg lg:mx-auto">
@@ -315,17 +314,17 @@ export default function LandingPage() {
 					</figure>
 				</div>
 			</section>
-
 			{/* Sessions Section */}
+			{/*TODO: Lock icon and progress bar */}
 			<section className="w-full py-8 px-4">
-				<h1 className="text-neutral-800 border-none text-3xl mb-8 text-center font-bold">
+				<h1 className="text-quaternary border-none text-3xl text-center font-bold">
 					Sessions
 				</h1>
-				<p className="font-medium text-center text-neutral-800">
-					You can start by choosing one of the
-					following this sections
+				<p className="font-medium text-center text-quaternary py-8">
+					You have to finish the session before
+					proceeding to the next session.
 				</p>
-				<div className="grid grid-cols-1 gap-4 mt-4 md:grid-cols-3 lg:max-w-screen-lg lg:mx-auto">
+				<div className="grid grid-cols-1 gap-y-4 gap-x-8 mt-2 md:grid-cols-3 lg:max-w-screen-lg lg:mx-auto">
 					{[
 						{
 							title: "Session I",
@@ -336,7 +335,7 @@ export default function LandingPage() {
 						{
 							title: "Session II",
 							caption:
-								"Research on Tree Enrichment in Oil Palm Plantation - How can agroforestry systemm be designed based on scientific evidence",
+								"Research on Tree Enrichment in Oil Palm Plantation - How can agroforestry system be designed based on scientific evidence",
 							to: "/session2",
 						},
 						{
@@ -346,19 +345,8 @@ export default function LandingPage() {
 							to: "/session3",
 						},
 					].map((item, i) => (
-						<Link key={i} to={item.to}>
-							<button className="rounded-lg bg-white shadow-lg flex flex-col p-4 gap-2 border border-gray-300 text-left md:h-full">
-								<p className="text-xl text-neutral-800 font-semibold">
-									{item.title}
-								</p>
-								<p className="text-neutral-600 md:flex-grow">
-									{item.caption}
-								</p>
-								<span className="w-10 h-10 rounded-full bg-primary text-white flex-center self-end">
-									<i className="bi bi-chevron-right"></i>
-								</span>
-							</button>
-						</Link>
+						//
+						<SessionComponent item={item} />
 					))}
 				</div>
 			</section>
