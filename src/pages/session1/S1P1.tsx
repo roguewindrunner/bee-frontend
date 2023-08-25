@@ -70,7 +70,8 @@ export default function S1P1() {
 						<a
 							className="text-sky-500 underline"
 							href="https://www.menti.com/4sbnpzhry7"
-							target="_blank">
+							target="_blank"
+							rel="noopener noreferrer">
 							https://www.menti.com/4sbnpzhry7
 						</a>{" "}
 						or go to{" "}

@@ -54,7 +54,7 @@ export default function Session1() {
 							alt=""
 							className="w-4 h-4"
 						/>
-						<div className="w-px border rounded-full bg-zinc-300 border-zinc-300 self-stretch "></div>
+						<div className="border rounded-full bg-zinc-300 border-zinc-300 self-stretch "></div>
 						<img
 							src={DFGLogo}
 							alt=""
@@ -66,10 +66,10 @@ export default function Session1() {
 					<AppendixMenu />
 				</div>
 
-				<div className="flex flex-col gap-8 lg:mx-32 lg:px-16 py-4 lg:flex-row">
+				<div className="flex flex-col gap-8 lg:mx-32 lg:px-16 lg:flex-row">
 					{/* left side */}
 					<div className="flex flex-col gap-8">
-						<div className="flex items-center lg:items-start flex-col text-white mt-8 lg:mt-0 gap-4">
+						<div className="flex items-center lg:items-start flex-col text-white lg:mt-8 lg:mt-0 gap-4">
 							{/* title */}
 							<span className="text-4xl font-semibold montserrat text-center lg:text-left">
 								Session I:
@@ -90,14 +90,14 @@ export default function Session1() {
 			<div className="flex flex-col text-xs gap-4 md:flex-row md:justify-between w-full max-w-screen-lg mx-auto px-6 pb-10 poppins">
 				{currentPage > 1 ? (
 					<Link
-						className="btn-prev md:max-w-1/2 md:self-end md:flex-grow-0"
+						className="btn-prev md:max-w-6 md:self-stretch md:flex-grow-0"
 						to={`./page${currentPage - 1}`}>
 						<i className="bi bi-chevron-left"></i>
-						<div className="flex flex-col flex-grow">
+						<div className="flex flex-col truncate md:text-clip">
 							<p className="font-bold">
 								Previous Page:
 							</p>
-							<p>
+							<p className="">
 								{session1.find(
 									(x) =>
 										x.page === currentPage - 1
@@ -109,13 +109,13 @@ export default function Session1() {
 					<span></span>
 				)}
 				<Link
-					className="btn-next md:max-w-1/2 md:self-end md:flex-grow-0"
+					className="btn-next md:max-w-6 md:self-stretch md:flex-grow-0"
 					to={
 						currentPage === session1.length
 							? "./finish"
 							: `./page${currentPage + 1}`
 					}>
-					<div className="flex flex-col">
+					<div className="flex flex-col truncate md:text-clip">
 						<p className="font-bold">
 							Next Page:
 						</p>

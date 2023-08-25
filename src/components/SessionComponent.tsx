@@ -16,6 +16,7 @@ type Props = {
 export default function SessionComponent(
 	props: Props
 ) {
+	/* TODO get progress from state */
 	return (
 		<Link to={props.item.to}>
 			<button className="rounded-lg bg-white w-full shadow-lg hover:drop-shadow-2xl hover:scale-110 ease-in-out duration-300 hover:delay-150 flex flex-col flex-wrap p-6 gap-y-4 border border-gray-300 justify-between drop-shadow-lg text-left md:h-full">
