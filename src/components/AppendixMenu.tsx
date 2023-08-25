@@ -36,6 +36,7 @@ export default function AppendixMenu() {
 						<img
 							src={bookIcon}
 							alt="Book icon with letter 'A'"
+							className="h-6 w-6 lg:h-8 lg:w-8"
 						/>
 						<span className="hidden lg:inline">
 							Appendix

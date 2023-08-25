@@ -43,7 +43,7 @@ export default function Session1() {
 				id="landing-cover"
 				className="relative w-full p-4 lg:shadow-xl lg:border-b-2 lg:border-primary">
 				{/* content */}
-				<div className="p-4 md:py-2 flex flex-col md:flex-row gap-2 xl:mx-auto relative lg:justify-between">
+				<div className="p-4 md:py-2 flex flex-col md:flex-row gap-2 xl:mx-auto relative lg:justify-between content-center">
 					{/* logo */}
 
 					<Link
@@ -52,13 +52,13 @@ export default function Session1() {
 						<img
 							src={EFForTSLogo}
 							alt=""
-							className="w-4 h-4"
+							className="w-4 h-4 lg:w-8 lg:h-8"
 						/>
 						<div className="border rounded-full bg-zinc-300 border-zinc-300 self-stretch "></div>
 						<img
 							src={DFGLogo}
 							alt=""
-							className="h-4 lg:h-3.5"
+							className="h-3 lg:h-6"
 						/>
 					</Link>
 
@@ -87,17 +87,17 @@ export default function Session1() {
 			</section>
 			<Outlet />
 			{/* navigation */}
-			<div className="flex flex-col text-xs gap-4 md:flex-row md:justify-between w-full max-w-screen-lg mx-auto px-6 pb-10 poppins">
+			<div className="flex flex-col text-xs gap-4 md:flex-row md:justify-between self-center w-full max-w-screen-lg mx-auto pb-4 px-4 poppins">
 				{currentPage > 1 ? (
 					<Link
-						className="btn-prev md:max-w-6 md:self-stretch md:flex-grow-0"
+						className=" btn-prev md:max-w-md md:self-stretch md:flex-grow-0 pl-4 hover:scale-[105%] ease-in-out duration-300"
 						to={`./page${currentPage - 1}`}>
 						<i className="bi bi-chevron-left"></i>
-						<div className="flex flex-col truncate md:text-clip">
+						<div className="flex flex-col justify-between w-[90%] lg:w-full">
 							<p className="font-bold">
 								Previous Page:
 							</p>
-							<p className="">
+							<p className="truncate">
 								{session1.find(
 									(x) =>
 										x.page === currentPage - 1
@@ -109,17 +109,17 @@ export default function Session1() {
 					<span></span>
 				)}
 				<Link
-					className="btn-next md:max-w-6 md:self-stretch md:flex-grow-0"
+					className=" btn-next md:max-w-md md:self-stretch md:flex-grow-0 pr-4 hover:scale-[105%] ease-in-out duration-300"
 					to={
 						currentPage === session1.length
 							? "./finish"
 							: `./page${currentPage + 1}`
 					}>
-					<div className="flex flex-col truncate md:text-clip">
+					<div className="flex flex-col justify-between w-[90%] lg:w-full">
 						<p className="font-bold">
 							Next Page:
 						</p>
-						<p>
+						<p className="truncate">
 							{session1.find(
 								(x) => x.page === currentPage + 1
 							)?.title ?? "End of Course"}

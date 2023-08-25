@@ -68,13 +68,13 @@ export default function S1P1() {
 						or Bahasa Indonesia) under the
 						following link:{" "}
 						<a
-							className="text-sky-500 underline"
+							className="text-sky-500 underline break-all"
 							href="https://www.menti.com/4sbnpzhry7"
 							target="_blank"
 							rel="noopener noreferrer">
 							https://www.menti.com/4sbnpzhry7
 						</a>{" "}
-						or go to{" "}
+						or go to
 						<strong>www.menti.com</strong> and use
 						the code <strong>8024 3447</strong>
 					</li>
