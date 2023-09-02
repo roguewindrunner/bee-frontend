@@ -1,8 +1,8 @@
-import React from "react";
 import {Link} from "react-router-dom";
 
 type Props = {
 	item: {
+		prev_sesh_state: boolean;
 		to: string;
 		title: string;
 		caption: string;
@@ -25,9 +25,18 @@ export default function SessionComponent(
 						<p className="text-xl text-septenary font-semibold">
 							{props.item.title}
 						</p>
-						<span className="w-10 h-10 rounded-full bg-tertiary text-white flex-center">
-							<i className="bi bi-lock text-xl"></i>
-						</span>
+						{props.item.prev_sesh_state ===
+							true && (
+							<span className="w-10 h-10 rounded-full bg-tertiary text-white flex-center">
+								<i className="bi bi-unlock text-xl"></i>
+							</span>
+						)}
+						{props.item.prev_sesh_state ===
+							false && (
+							<span className="w-10 h-10 rounded-full bg-septenary text-white flex-center">
+								<i className="bi bi-lock text-xl"></i>
+							</span>
+						)}
 					</div>
 					<p className="text-sm montserrat text-left font-semibold  text-quinary leading-snug md:flex-grow">
 						{props.item.caption}
@@ -37,10 +46,28 @@ export default function SessionComponent(
 					<p className="montserrat font-medium">
 						Progress
 					</p>
-					<div className="flex flex-row flex-start bg-octonary w-full h-5 rounded-lg">
-						<div className="bg-tertiary self-start w-1/2 h-5 rounded-lg"></div>
-					</div>
-					<p className="self-end">50%</p>
+					{props.item.prev_sesh_state ===
+						true && (
+						<>
+							<div className="flex flex-row flex-start bg-octonary w-full h-5 rounded-lg">
+								<div className="bg-tertiary self-start w-[10%] h-5 self-center rounded-lg"></div>
+							</div>
+							<p className="self-end text-sm">
+								1%
+							</p>
+						</>
+					)}
+					{props.item.prev_sesh_state ===
+						false && (
+						<>
+							<div className="flex flex-row flex-start bg-octonary w-full h-5 rounded-lg">
+								<div className="bg-tertiary self-start h-5 rounded-lg"></div>
+							</div>
+							<p className="self-end text-sm">
+								Previous Session Incomplete
+							</p>
+						</>
+					)}
 				</div>
 			</button>
 		</Link>

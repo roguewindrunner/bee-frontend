@@ -29,7 +29,7 @@ export default function Session1() {
 		//find object
 		const title =
 			session1.find((x) => x.page === page)
-				?.title ?? "OPMX";
+				?.title ?? "BEE";
 
 		//update title
 		document.title = title;
@@ -41,7 +41,7 @@ export default function Session1() {
 		<div className="w-screen overflow-x-hidden">
 			<section
 				id="landing-cover"
-				className="relative w-full p-4 lg:shadow-xl lg:border-b-2 lg:border-primary">
+				className={`relative w-full p-4 lg:shadow-xl lg:border-b-2 lg:border-primary ease-in-out `}>
 				{/* content */}
 				<div className="p-4 md:py-2 flex flex-col md:flex-row gap-2 xl:mx-auto relative lg:justify-between content-center">
 					{/* logo */}
@@ -68,8 +68,9 @@ export default function Session1() {
 
 				<div className="flex flex-col gap-8 lg:mx-32 lg:px-16 lg:flex-row">
 					{/* left side */}
-					<div className="flex flex-col gap-8">
-						<div className="flex items-center lg:items-start flex-col text-white lg:mt-8 lg:mt-0 gap-4">
+
+					<div className={`flex flex-col gap-8`}>
+						<div className="flex items-center lg:items-start flex-col text-white lg:mt-2 gap-4">
 							{/* title */}
 							<span className="text-4xl font-semibold montserrat text-center lg:text-left">
 								Session I:
@@ -85,12 +86,14 @@ export default function Session1() {
 					</div>
 				</div>
 			</section>
+
 			<Outlet />
+
 			{/* navigation */}
-			<div className="flex flex-col text-xs gap-4 md:flex-row md:justify-between self-center w-full max-w-screen-lg mx-auto pb-4 px-4 poppins">
+			<div className="flex flex-col text-xs gap-4 md:flex-row md:justify-evenly self-center w-full max-w-screen-lg mx-auto pb-4 px-4 poppins">
 				{currentPage > 1 ? (
 					<Link
-						className=" btn-prev md:max-w-md md:self-stretch md:flex-grow-0 pl-4 hover:scale-[105%] ease-in-out duration-300"
+						className=" btn-prev md:max-w-[50%] md:self-stretch md:flex-grow-0 pl-4 md:pr-8 hover:scale-[105%] ease-in-out duration-300"
 						to={`./page${currentPage - 1}`}>
 						<i className="bi bi-chevron-left"></i>
 						<div className="flex flex-col justify-between w-[90%] lg:w-full">
@@ -109,7 +112,7 @@ export default function Session1() {
 					<span></span>
 				)}
 				<Link
-					className=" btn-next md:max-w-md md:self-stretch md:flex-grow-0 pr-4 hover:scale-[105%] ease-in-out duration-300"
+					className=" btn-next md:max-w-[50%] md:self-stretch md:flex-grow-0 md:pr-8 pl-4 hover:scale-[105%] ease-in-out duration-300"
 					to={
 						currentPage === session1.length
 							? "./finish"

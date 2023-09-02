@@ -4,7 +4,7 @@ export default function Task2() {
 	return (
 		<>
 			<p className="poppins md:text-xl">
-				,<strong>Task 2: </strong>Based on your
+				<strong>Task 2: </strong>Based on your
 				pre-knowledge, mark where in Indonesia
 				(Southeast Asia) large areas of oil palm
 				plantations are located on the map. For
@@ -13,7 +13,7 @@ export default function Task2() {
 				high density of oil palm cultivation.
 			</p>
 			{/* TODO: Leaflet */}
-			<figure className="text-center">
+			<figure className="text-center mb-4">
 				<img
 					src={leafletPNG}
 					alt=""

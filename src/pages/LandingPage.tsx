@@ -2,10 +2,16 @@ import {Link} from "react-router-dom";
 import EFForTSLogo from "@/assets/Logo/efforts.png";
 import DFGLogo from "@/assets/Logo/dfg.png";
 import Figure1 from "@/assets/figure1.png";
+import {useEffect, useState} from "react";
 import ObjectiveCheckbox from "@/components/ObjectiveCheckbox";
 import SessionComponent from "@/components/SessionComponent";
 
 export default function LandingPage() {
+	const [s1Complete, setS1Complete] =
+		useState(false);
+	const [s2Complete, setS2Complete] =
+		useState(false);
+
 	return (
 		<div className="w-screen overflow-x-hidden flex flex-col poppins">
 			<section
@@ -328,18 +334,21 @@ export default function LandingPage() {
 					{[
 						{
 							title: "Session I",
+							prev_sesh_state: true,
 							caption:
 								"Impacts of Oil Palm Cultivation - How to Reconcile Human Welfare and the Environment",
 							to: "/session1",
 						},
 						{
 							title: "Session II",
+							prev_sesh_state: s1Complete,
 							caption:
 								"Research on Tree Enrichment in Oil Palm Plantation - How can agroforestry system be designed based on scientific evidence",
 							to: "/session2",
 						},
 						{
 							title: "Session III",
+							prev_sesh_state: s2Complete,
 							caption:
 								"Science Communication - How can research-based oil palm agroforestry knowledge be made available to farmers and the society",
 							to: "/session3",

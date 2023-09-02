@@ -7,7 +7,7 @@ export default function Task1() {
 	return (
 		<>
 			<p className="poppins md:text-xl">
-				<strong>Task1:</strong> Based on your
+				<strong>Task 1:</strong> Based on your
 				pre-knowledge, briefly explain what makes
 				South-East Asia and especially Indonesia
 				so suitable for oil palm cultivation.

@@ -8,6 +8,7 @@ import {
 import Session1 from "./layouts/Session1";
 import session1 from "./data/session1";
 import LandingPage from "./pages/LandingPage";
+import NotFoundPage from "./pages/NotFound";
 
 function App() {
 	const router = createBrowserRouter(
@@ -33,6 +34,10 @@ function App() {
 						element: x.element,
 					})),
 				],
+			},
+			{
+				path: "*",
+				element: <NotFoundPage />,
 			},
 		],
 		{
