@@ -90,7 +90,7 @@ export default function Session1() {
 			<Outlet />
 
 			{/* navigation */}
-			<div className="flex flex-col text-xs gap-4 md:flex-row md:justify-evenly self-center w-full max-w-screen-lg mx-auto pb-4 px-4 poppins">
+			<div className="flex flex-col text-xs gap-4 md:flex-row md:justify-between self-center w-full max-w-screen-lg mx-auto pb-4 px-6 poppins">
 				{currentPage > 1 ? (
 					<Link
 						className=" btn-prev md:max-w-[50%] md:self-stretch md:flex-grow-0 pl-4 md:pr-8 hover:scale-[105%] ease-in-out duration-300"

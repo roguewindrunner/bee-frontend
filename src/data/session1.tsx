@@ -18,6 +18,12 @@ import S1P7 from "@/pages/session1/S1P7";
 import S1P6 from "@/pages/session1/S1P6";
 import S1P5 from "@/pages/session1/S1P5";
 import S1P4 from "@/pages/session1/S1P4";
+import S1P25 from "@/pages/session1/S1P25";
+import S1P14 from "@/pages/session1/S1P14";
+import S1P16 from "@/pages/session1/S1P16";
+import S1P17 from "@/pages/session1/S1P17";
+import S1P18 from "@/pages/session1/S1P18";
+import S1P19 from "@/pages/session1/S1P19";
 
 const session1 = [
 	{
@@ -51,12 +57,6 @@ const session1 = [
 	},
 	{
 		page: 6,
-		title:
-			"Background Information - Impacts of Oil Palm Cultivation",
-		element: <S1P6 />,
-	},
-	{
-		page: 6 - 2,
 		title:
 			"Background Information - Impacts of Oil Palm Cultivation",
 		element: <S1P6 />,
@@ -106,7 +106,7 @@ const session1 = [
 		page: 14,
 		title:
 			"Oil Palm Plantations: Effects on Ecosystem Functions",
-		element: <div />,
+		element: <S1P14 />,
 	},
 	{
 		page: 15,
@@ -116,24 +116,24 @@ const session1 = [
 	{
 		page: 16,
 		title: "Impacts of Oil Palm Cultivation",
-		element: <div />,
+		element: <S1P16 />,
 	},
 	{
 		page: 17,
 		title:
 			"The Bigger Picture: Impact of Oil Palm Management on the SDGs",
-		element: <div />,
+		element: <S1P17 />,
 	},
 	{
 		page: 18,
 		title: "Sustainable Development Goals (SDGs)",
-		element: <div />,
+		element: <S1P18 />,
 	},
 	{
 		page: 19,
 		title:
 			"The Need for More Sustainable Oil Palm Cultivation?",
-		element: <div />,
+		element: <S1P19 />,
 	},
 	{
 		page: 20,
@@ -166,7 +166,7 @@ const session1 = [
 	{
 		page: 25,
 		title: "EFForTS – Interactive Field Tour",
-		element: <div />,
+		element: <S1P25 />,
 	},
 	{
 		page: 26,

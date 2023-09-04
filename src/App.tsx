@@ -9,6 +9,7 @@ import Session1 from "./layouts/Session1";
 import session1 from "./data/session1";
 import LandingPage from "./pages/LandingPage";
 import NotFoundPage from "./pages/NotFound";
+import S1Finish from "./pages/session1/S1Finish";
 
 function App() {
 	const router = createBrowserRouter(
@@ -34,6 +35,10 @@ function App() {
 						element: x.element,
 					})),
 				],
+			},
+			{
+				path: "/session1/finish",
+				element: <S1Finish />,
 			},
 			{
 				path: "*",

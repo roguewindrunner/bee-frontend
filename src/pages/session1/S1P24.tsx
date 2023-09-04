@@ -1,4 +1,6 @@
 import S1F25 from "@/assets/S1/S1F25.png";
+import S1F25_1 from "@/assets/S1/S1F25-1.png";
+import S1F25_2 from "@/assets/S1/S1F25-2.png";
 export default function S1P24() {
 	return (
 		<main className="w-full text-slate-800 px-6 py-4 poppins flex flex-col gap-4 max-w-screen-lg mx-auto">
@@ -51,13 +53,20 @@ export default function S1P24() {
 					and ecological aspects into account.
 				</p>
 				<figure className="text-center">
-					<img
-						src={S1F25}
-						alt=""
-						className="mx-auto"
-					/>
+					<div className="flex w-full flex-col md:flex-row gap-4 md:gap-0 justify-between">
+						<img
+							src={S1F25_1}
+							alt=""
+							className="mx-auto md:mx-0 md:max-w-[35%]"
+						/>
+						<img
+							src={S1F25_2}
+							alt=""
+							className="mx-auto md:mx-0 md:max-w-[60%]"
+						/>
+					</div>
 					<figcaption className="poppins text-xs md:text-xl py-4">
-						<strong>Figure 25:</strong>
+						<strong>Figure 25:</strong>{" "}
 						Collaborative modelling with local
 						stakeholder: Which degree of land-use
 						diversification (ranging from

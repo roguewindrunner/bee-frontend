@@ -1,5 +1,5 @@
 import S1F8 from "@/assets/S1/S1F8.png";
-export default function Task6() {
+export default function Task3() {
 	let value =
 		"Bitten schreiben Sie, Ihre Meinung";
 	const handleChange = (bro: string) => {
