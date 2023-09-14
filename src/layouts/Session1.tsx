@@ -71,7 +71,8 @@ export default function Session1() {
 				<div className="flex flex-col gap-8 lg:mx-32 lg:px-16 lg:flex-row">
 					{/* left side */}
 
-					<div className={`flex flex-col gap-8`}>
+					<div
+						className={`flex flex-col gap-8 mx-auto`}>
 						<div className="flex items-center lg:items-start flex-col text-white lg:mt-2 gap-4">
 							{/* title */}
 							<span className="text-4xl font-semibold montserrat text-center lg:text-left">

@@ -47,7 +47,7 @@ export default function TableOfContents({
 		};
 	}, []);
 	return (
-		<div className="bg-octonary p-4 mx-6 mt-6 md:mt-8 md:mx-4 rounded-lg">
+		<div className="bg-octonary p-4 mx-6 mt-6 md:mt-8 md:mx-4 rounded-lg ">
 			<h1
 				className="poppins text-primary p text-md md:text-xl cursor-pointer flex flex-row justify-between"
 				onClick={toggleDropdown}>
@@ -65,24 +65,26 @@ export default function TableOfContents({
 				</svg>
 			</h1>
 			{open && (
-				<ul className="poppins md:text-xs pt-4 text-black">
-					{items.map((item: pageDesc) => {
-						return location.pathname ===
-							`/session1/page${item.page}` ? (
-							<li className="pb-4 font-bold">
-								<Link to={`./page${item.page}`}>
-									{item.title}
-								</Link>
-							</li>
-						) : (
-							<li className="pb-4 font-light">
-								<Link to={`./page${item.page}`}>
-									{item.title}
-								</Link>
-							</li>
-						);
-					})}
-				</ul>
+				<div className="max-h-[40vh] overflow-y-scroll">
+					<ul className="poppins md:text-xs pt-4 text-black">
+						{items.map((item: pageDesc) => {
+							return location.pathname ===
+								`/session1/page${item.page}` ? (
+								<li className="pb-4 font-bold">
+									<Link to={`./page${item.page}`}>
+										{item.title}
+									</Link>
+								</li>
+							) : (
+								<li className="pb-4 font-light">
+									<Link to={`./page${item.page}`}>
+										{item.title}
+									</Link>
+								</li>
+							);
+						})}
+					</ul>
+				</div>
 			)}
 		</div>
 	);
