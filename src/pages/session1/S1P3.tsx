@@ -50,9 +50,9 @@ export default function S1P3() {
 					</p>
 				</InfoBox>
 
-				<div className="flex flex-col md:flex-row mb-4 gap-4">
+				<div className="flex flex-col md:flex-row mb-4 gap-4 ">
 					{" "}
-					<figure className="text-center max-w-[50%]">
+					<figure className="text-center md:max-w-[50%]">
 						<img
 							src={S1F4}
 							alt=""
@@ -64,7 +64,7 @@ export default function S1P3() {
 							plantation in Jambi province.
 						</figcaption>
 					</figure>
-					<figure className="text-center max-w-[50%]">
+					<figure className="text-center md:max-w-[50%]">
 						<img
 							src={S1F5}
 							alt=""
