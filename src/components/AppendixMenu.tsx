@@ -2,6 +2,7 @@ import bookIcon from "@/assets/book-letter-a.svg"; /*
 import GlossaryModal from "@/components/GlossaryModal";/*  */
 import {Menu, createStyles} from "@mantine/core";
 import {useDisclosure} from "@mantine/hooks";
+import {dropRight} from "lodash";
 import colors from "tailwindcss/colors";
 
 const useDropdownStyles = createStyles(() => ({
@@ -26,6 +27,10 @@ export default function AppendixMenu() {
 	return (
 		<>
 			<Menu
+				trigger="click"
+				openDelay={150}
+				closeDelay={50}
+				position="bottom-end"
 				shadow="md"
 				classNames={{
 					item: classes.item,

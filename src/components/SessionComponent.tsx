@@ -50,7 +50,7 @@ export default function SessionComponent(
 						true && (
 						<>
 							<div className="flex flex-row flex-start bg-octonary w-full h-5 rounded-lg">
-								<div className="bg-tertiary self-start w-[10%] h-5 self-center rounded-lg"></div>
+								<div className="bg-tertiary self-start w-[10%] h-5 rounded-lg"></div>
 							</div>
 							<p className="self-end text-sm">
 								1%

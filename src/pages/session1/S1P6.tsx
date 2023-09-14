@@ -4,9 +4,9 @@ import InfoBox from "@/components/InfoBox";
 
 export default function S1P6() {
 	return (
-		<main className="w-full text-slate-800 px-6 py-4 poppins flex flex-col gap-4 max-w-screen-lg mx-auto">
+		<main className="w-full text-slate-800 px-6 py-4 poppins flex flex-col gap-4 max-w-screen-lg mx-auto ">
 			<div className="my-1 lg:my-4 flex flex-col gap-6 lg:gap-8">
-				<h1 className="mt-4  montserrat">
+				<h1 className="montserrat">
 					<span className="block text-neutral-800  md:text-lg text-sm">
 						Background Information
 					</span>

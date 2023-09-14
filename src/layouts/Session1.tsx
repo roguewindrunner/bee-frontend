@@ -1,4 +1,5 @@
 import EFForTSLogo from "../assets/Logo/efforts.png";
+import NewEFForTSLogo from "@/assets/Logo/newlogo.png";
 import DFGLogo from "../assets/Logo/dfg.png";
 import {
 	Outlet,
@@ -9,6 +10,7 @@ import {
 import {useEffect, useState} from "react";
 import session1 from "@/data/session1";
 import AppendixMenu from "@/components/AppendixMenu";
+import TableOfContents from "@/components/TableOfContents";
 
 export default function Session1() {
 	const [currentPage, setCurrentPage] =
@@ -50,7 +52,7 @@ export default function Session1() {
 						to="/"
 						className="bg-zinc-50 py-2 px-2 bg-opacity-50 flex-none self-start lg:self-start flex gap-2 rounded-lg lg:rounded-md items-center">
 						<img
-							src={EFForTSLogo}
+							src={NewEFForTSLogo}
 							alt=""
 							className="w-4 h-4 lg:w-8 lg:h-8"
 						/>
@@ -87,8 +89,14 @@ export default function Session1() {
 				</div>
 			</section>
 
-			<Outlet />
-
+			<div className="flex flex-col md:flex-row">
+				<div className="md:mx-0 md:max-w-[20%] w-full">
+					<TableOfContents items={session1} />
+				</div>
+				<div className="self-start md:max-w-[60%] w-full">
+					<Outlet />
+				</div>
+			</div>
 			{/* navigation */}
 			<div className="flex flex-col text-xs gap-4 md:flex-row md:justify-between self-center w-full max-w-screen-lg mx-auto pb-4 px-6 poppins">
 				{currentPage > 1 ? (

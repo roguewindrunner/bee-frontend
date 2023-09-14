@@ -5,7 +5,7 @@ export default function S1P24() {
 	return (
 		<main className="w-full text-slate-800 px-6 py-4 poppins flex flex-col gap-4 max-w-screen-lg mx-auto">
 			<div className="my-1 lg:my-4 flex flex-col gap-6 lg:gap-8">
-				<h1 className="mt-4 mb-8">
+				<h1 className="mb-4">
 					<span className="text-3xl">
 						Take home message of Session I
 					</span>

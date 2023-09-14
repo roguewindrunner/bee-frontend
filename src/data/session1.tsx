@@ -70,7 +70,7 @@ const session1 = [
 	{
 		page: 8,
 		title:
-			"8 - Infoslide: Socioeconomic Impacts of Oil Palm Cultivation",
+			"Infoslide: Socioeconomic Impacts of Oil Palm Cultivation",
 		element: <S1P8 />,
 	},
 	{

@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom";
 import EFForTSLogo from "@/assets/Logo/efforts.png";
+import NewEFForTSLogo from "@/assets/Logo/newlogo.png";
 import DFGLogo from "@/assets/Logo/dfg.png";
 import image from "@/assets/pnf/peopleWithNet.svg";
 
@@ -10,7 +11,7 @@ export default function NotFoundPage() {
 				to="/"
 				className="bg-zinc-50 py-1 px-3 md:py-2 md:px-4 bg-opacity-50 flex-none flex gap-2 rounded-lg items-center m-4">
 				<img
-					src={EFForTSLogo}
+					src={NewEFForTSLogo}
 					alt=""
 					className="w-6 h-6 md:w-8 md:h-8"
 				/>

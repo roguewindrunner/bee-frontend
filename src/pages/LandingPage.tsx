@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom";
 import EFForTSLogo from "@/assets/Logo/efforts.png";
+import NewEFForTSLogo from "@/assets/Logo/newlogo.png";
 import DFGLogo from "@/assets/Logo/dfg.png";
 import Figure1 from "@/assets/figure1.png";
 import {useEffect, useState} from "react";
@@ -22,7 +23,7 @@ export default function LandingPage() {
 					{/* logo */}
 					<span className="bg-zinc-50 py-2 px-4 bg-opacity-50 flex-none self-center lg:self-start flex gap-2 rounded-lg items-center">
 						<img
-							src={EFForTSLogo}
+							src={NewEFForTSLogo}
 							alt=""
 							className="w-8 h-8"
 						/>
